@@ -1,21 +1,15 @@
-#from binance.enums import *
 import pymysql.cursors, datetime, urllib.request, requests, json, time
-#from binance.client import Client
 from os import system, name
 from connection import conn
 from random import *
 import traceback
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-#import websocket
-#from binance import AsyncClient, BinanceSocketManager, ThreadedWebsocketManager
 from binance.cm_futures import CMFutures
 import logging
 from binance.um_futures import UMFutures
 from binance.lib.utils import config_logging
 from binance.error import ClientError
 import datetime 
-
-
 
 
 requests.urllib3.disable_warnings()
@@ -40,8 +34,6 @@ def clear():
 row_count = conn.cursor()
 rowbot = row_count.execute("SELECT * FROM bot WHERE open = '0' ORDER BY id DESC")
 #rowbot_fetch = row_count.fetchone()
-
-
 
 
 
